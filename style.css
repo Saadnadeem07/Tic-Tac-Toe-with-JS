@@ -1,0 +1,66 @@
+body {
+  background-color: #d4bdac;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.grid {
+  display: inline-block;
+  display: grid;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  height: 120px;
+  width: 120px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  cursor: pointer;
+  margin: 2px; /* Optional for spacing between cells */
+}
+
+#name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px; /* Adjust spacing from the left */
+  height: 100px; /* Optional: Adjust height to your preference */
+}
+
+h1 {
+  margin: 0; /* Removes default margin for better centering */
+}
+
+button {
+  margin-top: 20px;
+  margin-left: 115px;
+  background-color: #4caf50; /* Green background */
+  color: white; /* White text */
+  font-size: 16px; /* Font size */
+  padding: 10px 20px; /* Padding for size */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+button:hover {
+  background-color: #45a049; /* Darker green when hovering */
+}
+
+button:active {
+  transform: scale(0.98); /* Button shrinks slightly when clicked */
+}
+
+button:focus {
+  outline: none; /* Remove outline when focused */
+}
