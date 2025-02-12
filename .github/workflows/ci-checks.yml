@@ -10,8 +10,8 @@ jobs:
  lint:
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]  # Multiple OS
-    runs-on: ${{ matrix.os }}  # Runs on each OS
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
 
     steps:
       - name: Checkout Repository
