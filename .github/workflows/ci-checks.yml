@@ -7,8 +7,11 @@ on:
   pull_request:
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
+ lint:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]  # Multiple OS
+    runs-on: ${{ matrix.os }}  # Runs on each OS
 
     steps:
       - name: Checkout Repository
