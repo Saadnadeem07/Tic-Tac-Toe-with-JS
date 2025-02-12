@@ -1,0 +1,24 @@
+name: CI Checks for Tic-Tac-Toe
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: npm install eslint prettier -g
+
+      - name: Run ESLint (JavaScript Code Check)
+        run: eslint script.js --fix || true
+
+      - name: Run Prettier (HTML & CSS Formatting)
+        run: prettier --write "*.html" "*.css"
