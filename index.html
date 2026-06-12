@@ -3,37 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TIC TAC TOE</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="description" content="A clean, modern Tic Tac Toe game built with vanilla HTML, CSS, and JavaScript." />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <div class="grid">
-      <div id="name">
-        <h1>TIC TAC TOE</h1>
-      </div>
-      <div class="row">
-        <div onclick="handleclick(this)" id="0" class="col"></div>
-        <div onclick="handleclick(this)" id="1" class="col"></div>
-        <div onclick="handleclick(this)" id="2" class="col"></div>
-      </div>
-      <div class="row">
-        <div onclick="handleclick(this)" id="3" class="col"></div>
-        <div onclick="handleclick(this)" id="4" class="col"></div>
-        <div onclick="handleclick(this)" id="5" class="col"></div>
-      </div>
-      <div class="row">
-        <div onclick="handleclick(this)" id="6" class="col"></div>
-        <div onclick="handleclick(this)" id="7" class="col"></div>
-        <div onclick="handleclick(this)" id="8" class="col"></div>
-      </div>
-      <div>
-        <button onclick="resetGame()">Restart Game</button>
-      </div>
-      <div id="name">
-        <h1 id="Game"></h1>
-      </div>
-    </div>
+    <main class="app">
+      <header class="app__header">
+        <h1 class="app__title">Tic&nbsp;Tac&nbsp;Toe</h1>
+        <p class="app__subtitle">Player vs Player</p>
+      </header>
 
-    <script src="script.js"></script>
+      <section class="scoreboard" aria-label="Scoreboard">
+        <div class="score score--x">
+          <span class="score__label">Player X</span>
+          <span class="score__value" id="score-x">0</span>
+        </div>
+        <div class="score score--draw">
+          <span class="score__label">Draws</span>
+          <span class="score__value" id="score-draw">0</span>
+        </div>
+        <div class="score score--o">
+          <span class="score__label">Player O</span>
+          <span class="score__value" id="score-o">0</span>
+        </div>
+      </section>
+
+      <p class="status" id="status" aria-live="polite">Player X's turn</p>
+
+      <div class="board" id="board" role="grid" aria-label="Tic Tac Toe board">
+        <button class="cell" data-index="0" aria-label="Cell 1"></button>
+        <button class="cell" data-index="1" aria-label="Cell 2"></button>
+        <button class="cell" data-index="2" aria-label="Cell 3"></button>
+        <button class="cell" data-index="3" aria-label="Cell 4"></button>
+        <button class="cell" data-index="4" aria-label="Cell 5"></button>
+        <button class="cell" data-index="5" aria-label="Cell 6"></button>
+        <button class="cell" data-index="6" aria-label="Cell 7"></button>
+        <button class="cell" data-index="7" aria-label="Cell 8"></button>
+        <button class="cell" data-index="8" aria-label="Cell 9"></button>
+      </div>
+
+      <button class="btn btn--reset" id="reset">Restart Game</button>
+    </main>
+
+    <script src="js/script.js"></script>
   </body>
 </html>

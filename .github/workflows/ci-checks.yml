@@ -21,7 +21,7 @@ jobs:
         run: npm install eslint prettier -g
 
       - name: Run ESLint (JavaScript Code Check)
-        run: eslint script.js --fix || true
+        run: eslint js/script.js --fix || true
 
       - name: Run Prettier (HTML & CSS Formatting)
-        run: prettier --write "*.html" "*.css"
+        run: prettier --write "*.html" "css/*.css"
